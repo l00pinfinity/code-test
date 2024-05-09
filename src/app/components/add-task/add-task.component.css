@@ -1,0 +1,32 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.add-task-container {
+    margin: 10px;
+}
+
+.task-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-field {
+    width: 100%;
+}
+
+.description-field {
+    width: 100%;
+}
+
+.add-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-task-button {
+    margin-left: 10px;
+}

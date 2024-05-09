@@ -1,0 +1,42 @@
+<p>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span>Task Management</span>
+            <span class="spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>share</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</p>
+
+<div *ngIf="task" class="task-details-container">
+    <h2>Task Details</h2>
+    <form [formGroup]="taskForm" class="task-form">
+        <mat-form-field class="title-field">
+            <input matInput placeholder="Title" formControlName="title">
+            <mat-error *ngIf="taskForm.get('title')?.hasError('required')">Title is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="description-field">
+            <textarea matInput placeholder="Description" formControlName="description"></textarea>
+            <mat-error *ngIf="taskForm.get('description')?.hasError('required')">Description is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <div class="status-container">
+                <mat-form-field class="status-select">
+                    <select matInput placeholder="Status" formControlName="status">
+                        <option value="complete">Complete</option>
+                        <option value="incomplete">Incomplete</option>
+                    </select>
+                </mat-form-field>
+            </div>
+        </mat-form-field>
+        <div class="action-buttons">
+            <button mat-flat-button color="primary" (click)="updateTask()">Update</button>
+            <button mat-flat-button color="warn" (click)="deleteTask()">Delete</button>
+        </div>
+    </form>
+</div>

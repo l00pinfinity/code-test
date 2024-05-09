@@ -1,0 +1,24 @@
+<div class="add-task-container">
+    <h2>Task Details</h2>
+    <form [formGroup]="taskForm" class="task-form">
+        <mat-form-field class="title-field">
+            <input matInput placeholder="Title" formControlName="title">
+            <mat-error *ngIf="taskForm.get('title')?.hasError('required')">Title is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="description-field">
+            <textarea matInput placeholder="Description" formControlName="description"></textarea>
+            <mat-error *ngIf="taskForm.get('description')?.hasError('required')">Description is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <select matInput placeholder="Status" formControlName="status">
+                <option value="" disabled selected hidden>Status</option>
+                <option value="complete">Complete</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+            <mat-error *ngIf="taskForm.get('status')?.hasError('required')">Status is required</mat-error>
+        </mat-form-field>
+        <div class="add-button-container">
+            <button mat-flat-button color="primary" class="add-task-button" (click)="addTask()">Add Task</button>
+        </div>
+    </form>
+</div>

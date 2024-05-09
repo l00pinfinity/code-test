@@ -1,0 +1,31 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.task-container {
+    margin: 20px;
+}
+
+.task-table {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-table th,
+.task-table td {
+    padding: 15px;
+    color: #000;
+}
+
+.task-table th {
+    text-align: left;
+}
+
+.add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
