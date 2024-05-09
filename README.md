@@ -1,27 +1,31 @@
-# CodeTest
+# CRESWAVE CODE TEST
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Welcome to the Creswave Code Test project! This project is a simple Angular application generated with Angular CLI version 17.3.6.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run the development server, you'll need to set up a backend server using JSON-Server to mock data.
 
-## Code scaffolding
+First, install JSON-Server globally:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+npm install -g json-server
+```
 
-## Build
+Then, start the JSON-Server with the provided `db.json` file:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npx json-server db.json
+```
 
-## Running unit tests
+This will start the JSON-Server backend server.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Next, start the Angular development server:
 
-## Running end-to-end tests
+```sh
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Navigate to `http://localhost:4200/` in your browser to view the application. The application will automatically reload if you make any changes to the source files.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Please note that when using JSON-Server, you may need to restart the server after adding tasks to update the server with the new data.
